@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:b="http://bootsfaces.net/ui" xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Example System</title>
+</h:head>
+
+<h:body style="background-image: url(images/1417895045940.jpg); background-repeat: no-repeat; width: 100%; height: 100%;" responsive="true">
+	
+	<h:form id="userViewsList">
+	 	<p:fieldset legend="Users" style="margin-bottom:20px; max-width:96%;" responsive="true">
+			<p:dataTable  var="_user" value="#{userView.users}" responsive="true">
+				<p:column headerText="Name">
+					<p:inputText value="#{_user.name}" />
+				</p:column>
+		
+				<p:column headerText="Login">
+					<p:inputText value="#{_user.login}" />
+				</p:column>
+		
+				<p:column headerText="Email">
+					<p:inputText  value="#{_user.email}" />
+				</p:column>
+		
+				<p:column headerText="Balance">
+					<h:outputText value="#{_user.balance}" />
+				</p:column>
+				
+				<p:column headerText="Salary">
+					<p:inputText value="#{_user.salary}" />
+				</p:column>
+							
+				<p:column headerText="Group User">
+				
+				<ui:repeat var="group" value="#{_user.groups}">
+						<h:outputText value="#{group.name}" />
+						<br/>
+				</ui:repeat>
+				
+				</p:column>
+		
+			</p:dataTable>
+			
+			<p:commandButton style="left:87%; margin-bottom:5px; margin-top:20px" value="Save Changes" action="#{userView.save}" responsive="true" ajax="false" icon="ui-icon-check"/>
+			
+		</p:fieldset>
+	</h:form>
+
+	<br/>
+	<br/>
+	
+	
+<!-- 	 <p:fieldset legend="Expense" style="margin-bottom:20px"> -->
+<!-- 		<p:dataTable var="expense" value="#{dtBasicView.cars}"> -->
+<!-- 			<p:column headerText="Id"> -->
+<!-- 				<h:outputText value="#{car.id}" /> -->
+<!-- 			</p:column> -->
+	
+<!-- 			<p:column headerText="Year"> -->
+<!-- 				<h:outputText value="#{car.year}" /> -->
+<!-- 			</p:column> -->
+	
+<!-- 			<p:column headerText="Brand"> -->
+<!-- 				<h:outputText value="#{car.brand}" /> -->
+<!-- 			</p:column> -->
+	
+<!-- 			<p:column headerText="Color"> -->
+<!-- 				<h:outputText value="#{car.color}" /> -->
+<!-- 			</p:column> -->
+<!-- 		</p:dataTable> -->
+<!-- 	</p:fieldset> -->
+
+</h:body>
+
+</html>
