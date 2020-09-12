@@ -14,7 +14,7 @@ public class EntityManagerProducer {
 	private EntityManagerFactory entityManagerFactory;
 	
 	public EntityManagerProducer(){
-		entityManagerFactory = Persistence.createEntityManagerFactory("cashmanager");
+		entityManagerFactory = Persistence.createEntityManagerFactory("ambulance");
 	}
 	
 	@Produces @RequestScoped

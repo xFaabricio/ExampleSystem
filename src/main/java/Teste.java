@@ -11,7 +11,7 @@ public class Teste {
 
 
 	public static void main(String[] args) {
-		EntityManagerFactory factory = Persistence.createEntityManagerFactory("cashmanager");
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("ambulance");
 		EntityManager manager = factory.createEntityManager();
 		
 		EntityTransaction trx = manager.getTransaction();
@@ -21,20 +21,21 @@ public class Teste {
 		User user = new User();
 		Group group = new Group();
 		
-//		group.setName("ADMINISTRATOR");
-//		group.setDescription("Administrador do sistema");
-//		manager.persist(group);
+		group.setName("ADMINISTRATOR");
+		group.setDescription("Administrador do sistema");
+		manager.persist(group);
 		
-//		group.setName("USER");
-//		group.setDescription("Usuario");
-//		manager.persist(group);
+		group.setName("USER");
+		group.setDescription("Usuario");
+		manager.persist(group);
 
-//		user.setLogin("MASTER");
-//		user.setPassword("MASTER");
-//		user.setEmail("master@cashmanager.com");
-//		user.setName("Sr. Master");
+		user.setLogin("MASTER");
+		user.setLastName("MASTER");
+		user.setPassword("MASTER");
+		user.setEmail("master@ambulance.com");
+		user.setName("Sr. Master");
 //		user.setSalary((long) 8000);
-//		manager.persist(user);
+		manager.persist(user);
 		
 		trx.commit();
 	}

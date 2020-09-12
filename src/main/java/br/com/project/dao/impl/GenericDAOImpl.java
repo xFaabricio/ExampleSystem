@@ -24,7 +24,7 @@ public class GenericDAOImpl<T> implements IGenericDAO<T> {
 
     private Class<T> entityClass;
 
-    protected static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("cashmanager");
+    protected static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("ambulance");
     protected EntityManager entityManager;
 
     public GenericDAOImpl() {

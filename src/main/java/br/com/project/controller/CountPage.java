@@ -57,7 +57,7 @@ public final class CountPage implements java.io.Serializable {
     /**
      *
      */
-    protected static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("cashmanager");
+    protected static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("ambulance");
 
     /**
      *
