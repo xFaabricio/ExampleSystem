@@ -12,7 +12,7 @@
 			<property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver" />
 			<property name="hibernate.connection.url" value="jdbc:mysql://localhost/ambulance?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC" />
 			<property name="hibernate.connection.user" value="xFaabricio" />
-			<property name="hibernate.connection.password" value="project" />
+			<property name="hibernate.connection.password" value="xFaabricio" />
             <property name="hibernate.hbm2ddl.auto" value="create" />
             <property name="hibernate.hbm2ddl.auto" value="update"/>
  
